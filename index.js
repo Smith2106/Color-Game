@@ -10,6 +10,7 @@ const colors = [
 const squares = document.querySelectorAll('.square');
 let pickedColor = colors[3];
 const colorDisplay = document.querySelector('#colorDisplay');
+const messageDisplay = document.querySelector('#message');
 
 colorDisplay.textContent = pickedColor;
 
@@ -21,7 +22,8 @@ squares.forEach((square, i) => {
             alert('Correct!');
         }
         else {
-            alert('Wrong!');
+            e.target.style.backgroundColor = '#23232';
+            messageDisplay.textContent = 'Try Again';
         }
     });
 });
