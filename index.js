@@ -36,13 +36,16 @@ hardBtn.addEventListener('click', () => {
     });
 });
 
-resetButton.addEventListener('click', () => {
+resetButton.addEventListener('click', (e) => {
     // Generate all new colors
     colors = generateRandomColors(numSquares);
     // Pick a new random color from array
     pickedColor = pickColor();
     // Change colorDislplay to match picked Color
     colorDisplay.textContent = pickedColor;
+
+    e.target.textContent = 'New Colors';
+    messageDisplay.textContent = '';
     // Change colors of squares
     squares.forEach((square, i) => square.style.backgroundColor = colors[i]);
     h1.style.backgroundColor = 'steelblue';
