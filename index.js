@@ -45,7 +45,7 @@ resetButton.addEventListener('click', () => {
     colorDisplay.textContent = pickedColor;
     // Change colors of squares
     squares.forEach((square, i) => square.style.backgroundColor = colors[i]);
-    h1.style.backgroundColor = '#232323';
+    h1.style.backgroundColor = 'steelblue';
 });
 
 colorDisplay.textContent = pickedColor;
